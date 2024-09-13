@@ -1,7 +1,7 @@
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram.types import ReplyKeyboardMarkup
 
-from localozation.i18n import main_menu_keyboard
+from localization.i18n import main_menu_keyboard
 
 
 def generate_main_menu(lang: str) -> ReplyKeyboardMarkup:
@@ -17,4 +17,4 @@ def generate_main_menu(lang: str) -> ReplyKeyboardMarkup:
         builder.button(text=button_text)
     builder.adjust(2)
 
-    return builder.as_markup(resize_keyobard=True)
+    return builder.as_markup(resize_keyboard=True)

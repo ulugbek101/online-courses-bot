@@ -58,6 +58,7 @@ class Database:
                 username VARCHAR(100),
                 phone_number VARCHAR(13),
                 lang VARCHAR(2),
+                last_visited_place TEXT,
                 is_subscribed INT DEFAULT 0,
                 notifications INT DEFAULT 1
             )
@@ -79,6 +80,30 @@ class Database:
         """
         self.execute(sql, (telegram_id, full_name,
                      username, lang), commit=True)
+
+    def update_last_visited_place(self, last_visited_place: int, telegram_id: int) -> None:
+        """Updated last visited section of a user
+
+        Args:
+            telegram_id (int): User's telgram id
+            last_visited_place (int): Last visited place of a user
+        """
+        sql = """
+            UPDATE users SET last_visited_place = %s WHERE telegram_id = %s
+        """
+        self.execute(sql, (last_visited_place, telegram_id), commit=True)
+
+    def update_language(self, lang: str, telegram_id: int) -> None:
+        """Updates user's language
+
+        Args:
+            lang (str): User's selected language
+            telegram_id (int): User's telegram id
+        """
+        sql = """
+            UPDATE users SET lang = %s WHERE telegram_id = %s
+        """
+        self.execute(sql, (lang, telegram_id), commit=True)
 
     def get_user(self, telegram_id: int) -> dict:
         """Returns user object from database based on telegram id

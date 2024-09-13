@@ -1,0 +1,2 @@
+class LastVisitedPlaces:
+    SETTINGS = "settings"
