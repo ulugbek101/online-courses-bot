@@ -58,7 +58,8 @@ class Database:
                 username VARCHAR(100),
                 phone_number VARCHAR(13),
                 lang VARCHAR(2),
-                is_subscribed INT DEFAULT 0
+                is_subscribed INT DEFAULT 0,
+                notifications INT DEFAULT 1
             )
         """
         self.execute(sql)
@@ -105,4 +106,4 @@ class Database:
         sql = """
             SELECT lang FROM users WHERE telegram_id = %s
         """
-        return self.execute(sql, (telgeram_id,), fetchone=True)
+        return self.execute(sql, (telgeram_id,), fetchone=True).get("lang")

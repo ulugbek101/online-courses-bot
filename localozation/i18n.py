@@ -10,6 +10,12 @@ greeting = {
     "en": "Hello, {} 👋.",
 }
 
+welcome_back = {
+    "uz": "Qaytganingizdan xursandmiz, {} 😊",
+    "ru": "С возврщением, {} 😊",
+    "en": "Welcome back, {} 😊"
+}
+
 invalid_language_selected = {
     "uz": "Iltimos, quyidagi tillarda birini tanlang.",
     "ru": "Пожалуйста, выберите один из языков ниже.",

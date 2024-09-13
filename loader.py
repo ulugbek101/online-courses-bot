@@ -15,5 +15,5 @@ db = Database(db_name=DB_NAME,
               db_host=DB_HOST,
               db_port=DB_PORT)
 
-db.drop_users_table()
+# db.drop_users_table()
 db.create_users_table()
