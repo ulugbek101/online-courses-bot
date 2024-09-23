@@ -46,6 +46,15 @@ class Database:
         """
         self.execute(sql)
 
+    def drop_categories_table(self) -> None:
+        """
+        Drops categories table
+        """
+        sql = """
+            DROP TABLE users
+        """
+        self.execute(sql)
+
     def create_users_table(self) -> None:
         """
         Creates uses table
@@ -61,6 +70,37 @@ class Database:
                 last_visited_place TEXT,
                 is_subscribed INT DEFAULT 0,
                 notifications INT DEFAULT 1
+            )
+        """
+        self.execute(sql)
+
+    def create_categories_tables(self) -> None:
+        """
+        Creates courses categories table
+        """
+        sql = """
+            CREATE TABLE IF NOT EXISTS categories(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                name_uz VARCHAR(200) NOT NULL,
+                name_ru VARCHAR(200) NOT NULL,
+                name_en VARCHAR(200) NOT NULL
+            )
+        """
+        self.execute(sql)
+
+    def create_courses_table(self) -> None:
+        """
+        Creates courses table
+        """
+        sql = """
+            CREATE TABLE IF NOT EXISTS courses(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                theme_uz VARCHAR(100) NOT NULL,
+                theme_ru VARCHAR(100) NOT NULL,
+                theme_en VARCHAR(100) NOT NULL,
+                video_path_uz VARCHAR(100),
+                video_path_ru VARCHAR(100),
+                video_path_en VARCHAR(100)
             )
         """
         self.execute(sql)
@@ -105,6 +145,18 @@ class Database:
         """
         self.execute(sql, (lang, telegram_id), commit=True)
 
+    def update_phone_number(self, phone_number: str, telegram_id: int) -> None:
+        """Update user's phone number in database
+
+        Args:
+            phone_number (str): User's phone number
+            telegram_id (int): User's telegram id from telegram API
+        """
+        sql = """
+            UPDATE users set phone_number = %s WHERE telegram_id = %s
+        """
+        self.execute(sql, (phone_number, telegram_id), commit=True)
+
     def get_user(self, telegram_id: int) -> dict:
         """Returns user object from database based on telegram id
 
@@ -132,3 +184,14 @@ class Database:
             SELECT lang FROM users WHERE telegram_id = %s
         """
         return self.execute(sql, (telgeram_id,), fetchone=True).get("lang")
+
+    def get_categories(self) -> list:
+        """Gets all categories from database
+
+        Returns:
+            list: List of all categories
+        """
+        sql = """
+            SELECT * FROM categories
+        """
+        return self.execute(sql, fetchall=True)

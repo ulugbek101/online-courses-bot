@@ -1,7 +1,19 @@
+about_me_text = {
+    "uz": "Men bu yo'lanishda 10+ yildan ortiq tajribaga ega mutaxassisman va ...",
+    "ru": "Я являюсь специалистом в этой области с опытом свыше 10 лет и ...",
+    "en": "I'm the specialist with the 10+ years of experience and ...",
+}
+
 select_language = {
     "uz": "Iltimos, tilni tanlang.",
     "ru": "Пожалуйстаб выберите язык.",
     "en": "Please, select language.",
+}
+
+select_course_category = {
+    "uz": "👇 Kursni tanlang",
+    "ru": "👇 Выберите курс",
+    "en": "👇 Choose a course",
 }
 
 greeting = {
@@ -22,6 +34,12 @@ invalid_language_selected = {
     "en": "Please, choose of the languages below.",
 }
 
+invalid_phone_number_selected = {
+    "uz": "Iltimos, telefon raqamni quyidagicha formatda kiriting: xxx (xx) xxx xx xx. \nMasalan: 998 99 693 73 08 yoki 998 996937308, +998 99 693 73 08.",
+    "ru": "Пожалуйста, введите номер телефона в следующем формате: xxx (xx) xxx xx xx. \nНапример: 998 99 693 73 08 или 998 996937308, +998 99 693 73 08.",
+    "en": "Please, enter your phone number in the following format: xxx (xx) xxx xx xx. \nFor example: 998 99 693 73 08 or 998 996937308, +998 99 693 73 08.",
+}
+
 successfull_registration = {
     "uz": "Muvaffaqiyatli ro'yxatga olindingiz.",
     "ru": "Вы усрешно зарегистрированы.",
@@ -31,7 +49,19 @@ successfull_registration = {
 action_title = {
     "uz": "Iltimos, harakatni tanlang.",
     "ru": "Пожалуйста, выберите действие.",
-    "en": "Please, choose an action.",
+    "en": "Please, choose anaction.",
+}
+
+request_contact_number = {
+    "uz": "Telefon raqamni quyidagicha formatda kiriting: xxx (xx) xxx xx xx. \nMasalan: 998 99 693 73 08 yoki 998996937308, +998 99 693 73 08.",
+    "ru": "Введите номер телефона в следующем формате: xxx (xx) xxx xx xx. \nНапример: 998 99 693 73 08 или 998996937308, +998 99 693 73 08.",
+    "en": "Enter your phone number in the following format: xxx (xx) xxx xx xx. \nFor example: 998 99 693 73 08 or 998996937308, +998 99 693 73 08.",
+}
+
+request_contact_number_button = {
+    "uz": "📞 Telefon raqamimni ulashish",
+    "ru": "📞 Поделиться номером телефона",
+    "en": "📞 Share my phone number",
 }
 
 successfully_done = {
@@ -45,6 +75,12 @@ back_button = {
     "ru": "👈 Назад",
     "en": "👈 Back",
 }
+
+# courses_categories_menu_keyboard = {
+#     "uz": ["🗒️ Asoslar", "🔺 Malakani oshirish"],
+#     "ru": ["🗒️ Курсы с нуля", "🔺 Курсы для повышения квалификации"],
+#     "en": ["🗒️ Basics", "🔺 Level up"],
+# }
 
 main_menu_keyboard = {
     "uz": ["📋 Kurslar", "ℹ️ Men haqimda", "⚙️ Sozlamalar"],
