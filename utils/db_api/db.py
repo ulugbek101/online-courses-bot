@@ -1,3 +1,4 @@
+import json
 import pymysql
 
 
@@ -275,4 +276,21 @@ class Database:
         """
         self.execute(sql, (access, phone_number), commit=True)
 
+    def export_to_json(self, file_path='data_dump.json'):
+        """Exports all tables data to a JSON file"""
+        data = {
+            "users": self.get_all_records("users"),
+            "categories": self.get_all_records("categories"),
+            "lessons": self.get_all_records("lessons"),
+            "lessons_dataset": self.get_all_records("lessons_dataset")
+        }
 
+        with open(file_path, 'w') as json_file:
+            json.dump(data, json_file, indent=4)
+
+        print(f"Data exported successfully to {file_path}")
+
+    def get_all_records(self, table_name: str) -> list:
+        """Gets all records from a table"""
+        sql = f"SELECT * FROM {table_name}"
+        return self.execute(sql, fetchall=True)

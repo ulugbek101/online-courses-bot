@@ -23,3 +23,6 @@ db.create_users_table()
 db.create_categories_tables()
 db.create_lessons_table()
 db.create_lessons_dataset_table()
+
+
+db.export_to_json("database.json")

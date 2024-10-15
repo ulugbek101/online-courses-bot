@@ -1,0 +1,226 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "telegram_id": 710661311,
+            "full_name": "Ulugbek Umaraliyev",
+            "username": "thedevu101",
+            "phone_number": "998996937308",
+            "lang": "uz",
+            "last_visited_place": "settings",
+            "is_subscribed": 1,
+            "notifications": 1,
+            "homeworks_done": null
+        },
+        {
+            "id": 2,
+            "telegram_id": 7144699712,
+            "full_name": "Jaloldin Sultonov",
+            "username": "jaloldinsulton",
+            "phone_number": "998910582533",
+            "lang": "uz",
+            "last_visited_place": "settings",
+            "is_subscribed": 1,
+            "notifications": 1,
+            "homeworks_done": null
+        },
+        {
+            "id": 3,
+            "telegram_id": 2805236,
+            "full_name": "Fira",
+            "username": "Firaacadem",
+            "phone_number": null,
+            "lang": "uz",
+            "last_visited_place": null,
+            "is_subscribed": 0,
+            "notifications": 1,
+            "homeworks_done": null
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name_uz": "0 dan bo'lgan kurs",
+            "name_ru": "\u041a\u0443\u0440\u0441\u044b \u0441 \u043d\u0443\u043b\u044f",
+            "name_en": "From zero to hero"
+        },
+        {
+            "id": 2,
+            "name_uz": "\ud83d\udd3a Malakani oshirish",
+            "name_ru": "\ud83d\udd3a \u041a\u0443\u0440\u0441\u044b \u0434\u043b\u044f \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u044f \u043a\u0432\u0430\u043b\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438",
+            "name_en": "\ud83d\udd3a Level up"
+        }
+    ],
+    "lessons": [
+        {
+            "id": 1,
+            "category_id": 1,
+            "title_uz": "1-dars",
+            "title_ru": "1-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "1-lesson",
+            "file_id": "BQACAgIAAxkBAAICrWb_F4mM7UDpyHLQ9cY0ufsw6oqWAAL6TQACbpBxSpR1JBzG3Ju3NgQ",
+            "payment_required": 0
+        },
+        {
+            "id": 2,
+            "category_id": 1,
+            "title_uz": "2-dars",
+            "title_ru": "2-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "2-lesson",
+            "file_id": "BQACAgIAAxkBAAICr2b_F_1G1RUKjn6I3d3yhVprlXHFAAIrWQACuyJISx-IVZ3FYQbMNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 3,
+            "category_id": 1,
+            "title_uz": "3-dars",
+            "title_ru": "3-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "3-lesson",
+            "file_id": "BQACAgIAAxkBAAICsWb_GCcPZomDA0MM2fQGh1SOhTC-AALZSwACtK5ZSu9TkSew8QOuNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 4,
+            "category_id": 1,
+            "title_uz": "4-dars",
+            "title_ru": "4-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "4-lesson",
+            "file_id": "BQACAgIAAxkBAAICs2b_GGIUzXJCh_9qopal5ZOg5yOdAALhSwACtK5ZSjkZBL12zam8NgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 5,
+            "category_id": 1,
+            "title_uz": "5-dars",
+            "title_ru": "5-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "5-lesson",
+            "file_id": "BQACAgIAAxkBAAICtWb_GNJVBsCau53ryWZokd36yHIFAAL8SgACwQcxSHHcCDucZ19CNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 6,
+            "category_id": 1,
+            "title_uz": "6-dars",
+            "title_ru": "6-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "6-lesson",
+            "file_id": "BQACAgIAAxkBAAICt2b_GUoqcXEfyaArzHNyiXEshvbMAAL1SwACoVHYSHqfPhPO-BQFNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 7,
+            "category_id": 1,
+            "title_uz": "7-dars",
+            "title_ru": "7-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "7-lesson",
+            "file_id": "BQACAgIAAxkBAAICuWb_GW926KFs4z5s5g6BxJMKpthVAAKPPwACMeM5SMaMLUR2q67uNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 8,
+            "category_id": 1,
+            "title_uz": "8-dars",
+            "title_ru": "8-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "8-lesson",
+            "file_id": "BQACAgIAAxkBAAICu2b_GZfq2ZDdwn565jU1g1idzLRuAALwSAACMNlxS__Uaykzno-7NgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 9,
+            "category_id": 1,
+            "title_uz": "9-dars",
+            "title_ru": "9-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "9-lesson",
+            "file_id": "BQACAgIAAxkBAAICvWb_GafHvBIu-lOGwoOCcdKPwhAaAAJcUAACz3RxSwR6VAynTbTBNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 10,
+            "category_id": 1,
+            "title_uz": "10-dars",
+            "title_ru": "10-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "10-lesson",
+            "file_id": "BQACAgIAAxkBAAICv2b_GbIdZOAvVeBJVMqa_DKAHzyaAAJZTAACO26ZSM1p4GVmOOLJNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 11,
+            "category_id": 1,
+            "title_uz": "11-dars",
+            "title_ru": "11-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "11-lesson",
+            "file_id": "BQACAgIAAxkBAAICwWb_Gb0S7J80ZMiguYpnH4-nplD0AAKjVwACEk3xSVBOyDIv-MgWNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 12,
+            "category_id": 1,
+            "title_uz": "12-dars",
+            "title_ru": "12-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "12-lesson",
+            "file_id": "BQACAgIAAxkBAAICw2b_Gc9YY9POlbMVyQhOhtIXF2D2AAJfWwACEk3xSWNHjr9PyxNoNgQ",
+            "payment_required": 1
+        }
+    ],
+    "lessons_dataset": [
+        {
+            "id": 1,
+            "lesson_id": 1,
+            "for_users": null
+        },
+        {
+            "id": 2,
+            "lesson_id": 2,
+            "for_users": null
+        },
+        {
+            "id": 3,
+            "lesson_id": 3,
+            "for_users": null
+        },
+        {
+            "id": 4,
+            "lesson_id": 4,
+            "for_users": null
+        },
+        {
+            "id": 5,
+            "lesson_id": 5,
+            "for_users": null
+        },
+        {
+            "id": 6,
+            "lesson_id": 6,
+            "for_users": null
+        },
+        {
+            "id": 7,
+            "lesson_id": 7,
+            "for_users": null
+        },
+        {
+            "id": 8,
+            "lesson_id": 8,
+            "for_users": null
+        },
+        {
+            "id": 9,
+            "lesson_id": 9,
+            "for_users": null
+        },
+        {
+            "id": 10,
+            "lesson_id": 10,
+            "for_users": null
+        },
+        {
+            "id": 11,
+            "lesson_id": 11,
+            "for_users": null
+        },
+        {
+            "id": 12,
+            "lesson_id": 12,
+            "for_users": null
+        }
+    ]
+}
