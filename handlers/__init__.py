@@ -3,5 +3,9 @@ from . import start
 from . import settings
 from . import settings_change_language
 from . import settings_change_phone_number
-from . import courses
+from . import categories
 from . import about_me
+from . import lessons
+from . import lesson
+from . import grant_access
+from . import send_homework

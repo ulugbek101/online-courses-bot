@@ -55,6 +55,15 @@ class Database:
         """
         self.execute(sql)
 
+    def drop_lessons_table(self) -> None:
+        """
+        Drops lessons table
+        """
+        sql = """
+            DROP TABLE lessons
+        """
+        self.execute(sql)
+
     def create_users_table(self) -> None:
         """
         Creates uses table
@@ -69,7 +78,8 @@ class Database:
                 lang VARCHAR(2),
                 last_visited_place TEXT,
                 is_subscribed INT DEFAULT 0,
-                notifications INT DEFAULT 1
+                notifications INT DEFAULT 1,
+                homeworks_done VARCHAR(100)
             )
         """
         self.execute(sql)
@@ -88,19 +98,19 @@ class Database:
         """
         self.execute(sql)
 
-    def create_courses_table(self) -> None:
+    def create_lessons_table(self) -> None:
         """
-        Creates courses table
+        Creates lessons table
         """
         sql = """
-            CREATE TABLE IF NOT EXISTS courses(
+            CREATE TABLE IF NOT EXISTS lessons(
                 id INT PRIMARY KEY AUTO_INCREMENT,
-                theme_uz VARCHAR(100) NOT NULL,
-                theme_ru VARCHAR(100) NOT NULL,
-                theme_en VARCHAR(100) NOT NULL,
-                video_path_uz VARCHAR(100),
-                video_path_ru VARCHAR(100),
-                video_path_en VARCHAR(100)
+                category_id INT NOT NULL,
+                title_uz VARCHAR(100),
+                title_ru VARCHAR(100),
+                title_en VARCHAR(100),
+                file_id VARCHAR(255),
+                payment_required INT NOT NULL
             )
         """
         self.execute(sql)
@@ -195,3 +205,58 @@ class Database:
             SELECT * FROM categories
         """
         return self.execute(sql, fetchall=True)
+
+    def get_lessons(self, category_id: int) -> list:
+        """Returns the list of all lessons by category_id
+
+        Args:
+            category_id (int): Lesson's category
+
+        Returns:
+            list: List of all courses
+        """
+        sql = """
+            SELECT * FROM lessons where category_id = %s
+        """
+        return self.execute(sql, (category_id,), fetchall=True)
+
+    def get_lesson(self, lesson_id: int) -> dict:
+        """Returns particular lesson by lesson id
+
+        Args:
+            lesson_id (int): selected lesson's id
+
+        Returns:
+            dict: Lesson object
+        """
+        sql = """
+            SELECT * FROM lessons WHERE id = %s
+        """
+        return self.execute(sql, (lesson_id,), fetchone=True)
+
+    def get_users_done_homeworks(self, user_id: int) -> str:
+        """Returns completed homeworks list of a particular user
+
+        Args:
+            user_id (int): user's id
+
+        Returns:
+            str: Completed homeworks list
+        """
+        sql = """
+            SELECT homeworks_done FROM users
+            WHERE id = %s
+        """
+        return self.execute(sql, (user_id,), fetchone=True).get('homeworks_done')
+
+    def grant_access(self, phone_number: str) -> None:
+        """Grants access to a particular user by phone number
+
+        Args:
+            phone_number (str): user's phone number
+        """
+        sql = """
+            UPDATE users SET is_subscribed = 1
+            WHERE phone_number = %s
+        """
+        self.execute(sql, (phone_number,), commit=True)

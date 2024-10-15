@@ -32,6 +32,6 @@ async def update_language(message: types.Message, state: FSMContext):
         await message.answer(text=f"{invalid_phone_number_selected.get(lang)}")
     else:
         phone_number = message.contact.phone_number if message.contact else message.text
-        db.update_phone_number(phone_number, message.from_user.id)
+        db.update_phone_number(phone_number.replace("+", "").replace(" ", "").strip(), message.from_user.id)
         await state.clear()
         await message.answer(text=f"{successfully_done.get(lang)} ✅", reply_markup=generate_settings_menu(lang))

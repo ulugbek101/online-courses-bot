@@ -16,7 +16,7 @@ async def start(message: types.Message, state: FSMContext):
     user = db.get_user(message.from_user.id)
 
     if user:
-        await message.answer(text=f"{welcome_back.get(lang)}".format(message.from_user.full_name), reply_markup=generate_main_menu(lang=user.get("lang")))
+        await message.answer(text=f"{welcome_back.get(lang)}".format(message.from_user.full_name), reply_markup=generate_main_menu(lang=user.get("lang"), telegram_id=message.from_user.id))
     else:
         await state.set_state(LanguagesForm.lang)
         await message.answer(text=f"{greeting.get(lang)} {select_language.get(lang)}".format(message.from_user.full_name), reply_markup=generate_languages_menu())
@@ -40,4 +40,4 @@ async def complete_registration(message: types.Message, state: FSMContext):
                          username=message.from_user.username,
                          lang=selected_lang)
         await state.clear()
-        await message.answer(text=f"{successfull_registration.get(selected_lang)} ✅", reply_markup=generate_main_menu(selected_lang))
+        await message.answer(text=f"{successfull_registration.get(selected_lang)} ✅", reply_markup=generate_main_menu(selected_lang, message.from_user.id))

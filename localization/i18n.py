@@ -83,13 +83,96 @@ back_button = {
 # }
 
 main_menu_keyboard = {
-    "uz": ["📋 Kurslar", "ℹ️ Men haqimda", "⚙️ Sozlamalar"],
-    "ru": ["📋 Курсы", "ℹ️ Обо мне", "⚙️ Настройки"],
-    "en": ["📋 Courses", "ℹ️ About me", "⚙️ Settings"],
+    "uz": ["📋 Kurslar", "ℹ️ Men haqimda", "⚙️ Sozlamalar", "✅ Ruxsat ochish"],
+    "ru": ["📋 Курсы", "ℹ️ Обо мне", "⚙️ Настройки", "✅ Открыть доступ"],
+    "en": ["📋 Courses", "ℹ️ About me", "⚙️ Settings", "✅ Grant access"],
 }
 
 settings_menu_keyboard = {
     "uz": ["🚨 Xabarnomalarni bosharish", "📞 Raqam kiritish/yangilash", "🇺🇿 Tilni o'zgartirish"],
     "ru": ["🚨 Управление рассылками", "📞 Добавить/изменить номер", "🇷🇺 Изменить язык"],
     "en": ["🚨 Manage anouncements", "📞 Add/change number", "🇺🇸 Change language"],
+}
+
+payment_required = {
+    "uz": "🚨 Ushbu videodarslikni ko'rish uchun to'lov talab etiladi",
+    "ru": "🚨 Требуется оплата для просмотра данного занятия",
+    "en": "🚨 Payment required to view this lesson",
+}
+
+access_denied = {
+    "uz": "🚫 Pullik dars",
+    "ru": "🚫 Платное занятие",
+    "en": "🚫 Paid lesson",
+}
+
+access_granted = {
+    "uz": "✅ Dars ochilgan",
+    "ru": "✅ Доступ открыт",
+    "en": "✅ Access granted",
+}
+
+free_lesson = {
+    "uz": "🔥 Tekin ochiq dars",
+    "ru": "🔥 Бесплатное занятие",
+    "en": "🔥 Free lesson"
+}
+
+send_homework = {
+    "uz": "📝 Uyga vazifa yuborish",
+    "ru": "📝 Отправить домашнее задание",
+    "en": "📝 Send homework",
+}
+
+complete_homework_warning = {
+    "uz": "Keyingi darsga o'tish uchun avvalgi dars uchun vazifa yuboring ❗️",
+    "ru": "Чтобы пройти на следующее занятие, сначала выполните д/з от предыдущего занятия ❗️",
+    "en": "Complete the homework for the previous lesson first to go to the next lesson ❗️",
+}
+
+request_homework_text = {
+    "uz": "📝 Dars bo'icha o'zingizni qisqacha hulosangizni yozib qoldiring",
+    "ru": "📝 Отправьте краткий вывод по занятию",
+    "en": "📝 Send the brief feedback/opinion from a lesson",
+}
+
+homework_send_to_admins = {
+    "uz": "Uy vazifasi yuborildi, tez orada javob beramiz va keyingi darsga o'tishingiz mumkin bo'ladi 😉",
+    "ru": "Домашнее задание отправлено, скоро мы уведомим вас о результате и вы сможете перейти на следующее занятие 😉",
+    "en": "Homework sent, soon we will notify you about the result and you would be able to go further 😉",
+}
+homework_title = {
+    "uz": "Uy vazifasi",
+    "ru": "Домашнее задание",
+    "en": "Homework",
+}
+
+FIO = {
+    "uz": "Student",
+    "ru": "Студент",
+    "en": "Student",
+}
+
+phone_number = {
+    "uz": "Telefon raqami",
+    "ru": "Номер телефона",
+    "en": "Phone number",
+}
+
+homework_body = {
+    "uz": "Vazifa",
+    "ru": "Задание",
+    "en": "Homework",
+}
+
+accept_or_deny_homework = {
+    "uz": ["✅ Qabul qilish", "❌ Qaytarish"],
+    "uz": ["✅ Принят", "❌ Переделать"],
+    "uz": ["✅ Accept", "❌ Deny"],
+}
+
+lesson_name = {
+    "uz": "Dars mavzusi",
+    "ru": "Тема занятия",
+    "en": "Lesson theme"
 }

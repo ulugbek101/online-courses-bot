@@ -4,7 +4,7 @@ from aiogram.types import InlineKeyboardMarkup
 from loader import db
 
 
-def generate_courses_categories_menu(lang: str) -> InlineKeyboardMarkup:
+def generate_categories_menu(lang: str) -> InlineKeyboardMarkup:
     """Generates and returns courses categories menu
 
     Args:
