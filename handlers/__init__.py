@@ -8,4 +8,6 @@ from . import about_me
 from . import lessons
 from . import lesson
 from . import grant_access
+from . import close_access
 from . import send_homework
+from . import video_id

@@ -17,10 +17,11 @@ def generate_main_menu(lang: str, telegram_id: int) -> ReplyKeyboardMarkup:
     """
     builder = ReplyKeyboardBuilder()
 
-    for button_text in main_menu_keyboard.get(lang)[:-1]:
+    for button_text in main_menu_keyboard.get(lang)[:-2]:
         builder.button(text=button_text)
     
     if telegram_id in ADMINS:
+        builder.button(text=main_menu_keyboard.get(lang)[-2])
         builder.button(text=main_menu_keyboard.get(lang)[-1])
 
     builder.adjust(2)

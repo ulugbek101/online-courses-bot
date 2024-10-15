@@ -83,9 +83,9 @@ back_button = {
 # }
 
 main_menu_keyboard = {
-    "uz": ["📋 Kurslar", "ℹ️ Men haqimda", "⚙️ Sozlamalar", "✅ Ruxsat ochish"],
-    "ru": ["📋 Курсы", "ℹ️ Обо мне", "⚙️ Настройки", "✅ Открыть доступ"],
-    "en": ["📋 Courses", "ℹ️ About me", "⚙️ Settings", "✅ Grant access"],
+    "uz": ["📋 Kurslar", "ℹ️ Men haqimda", "⚙️ Sozlamalar", "✅ Ruxsat ochish", "❌ Ruxsatni yopish"],
+    "ru": ["📋 Курсы", "ℹ️ Обо мне", "⚙️ Настройки", "✅ Открыть доступ", "❌ Закрыть доступ"],
+    "en": ["📋 Courses", "ℹ️ About me", "⚙️ Settings", "✅ Grant access", "❌ Close access"],
 }
 
 settings_menu_keyboard = {

@@ -39,8 +39,8 @@ async def send_homework_to_admins(message: types.Message, state: FSMContext):
             student_full_name = student.get('full_name')
             student_phone_number = student.get('phone_number')
 
-            title = f"{homework_title.get(admin_lang)}\n\n{lesson_name}:{lesson.get(f'title_{admin_lang}')} \n{FIO.get(admin_lang)}: {student_full_name}\n{phone_number.get(admin_lang)}: {student_phone_number}\n\n{homework_body.get(admin_lang)}: {message.text}"
-            await bot.send_message(chat_id=tg_id, text=title, reply_markup=generate_accept_or_deny_homework_menu(admin_lang))
+            title = f"{homework_title.get(admin_lang)}\n\n{lesson_name.get(admin_lang)}: {lesson.get(f'title_{admin_lang}')} \n{FIO.get(admin_lang)}: {student_full_name}\n{phone_number.get(admin_lang)}: {student_phone_number}\n\n{homework_body.get(admin_lang)}: {message.text}"
+            await bot.send_message(chat_id=tg_id, text=title, reply_markup=generate_accept_or_deny_homework_menu(admin_lang, user_id, lesson_id))
         except:
             pass
         

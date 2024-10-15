@@ -115,6 +115,19 @@ class Database:
         """
         self.execute(sql)
 
+    def create_lessons_dataset_table(self) -> None:
+        """
+        Creates a table where a dataset of lessons is stored that contains which lesson is opened for which people
+        """
+        sql = """
+            CREATE TABLE IF NOT EXISTS lessons_dataset(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                lesson_id INT NOT NULL,
+                for_users TEXT
+            )
+        """
+        self.execute(sql)
+
     def register_user(self, telegram_id: int, full_name: str, username: str, lang: str) -> None:
         """Registers user in a database
 
@@ -249,14 +262,17 @@ class Database:
         """
         return self.execute(sql, (user_id,), fetchone=True).get('homeworks_done')
 
-    def grant_access(self, phone_number: str) -> None:
+    def grant_or_close_access(self, phone_number: str, access: int) -> None:
         """Grants access to a particular user by phone number
 
         Args:
             phone_number (str): user's phone number
+            access (int): access type
         """
         sql = """
-            UPDATE users SET is_subscribed = 1
+            UPDATE users SET is_subscribed = %s
             WHERE phone_number = %s
         """
-        self.execute(sql, (phone_number,), commit=True)
+        self.execute(sql, (access, phone_number), commit=True)
+
+

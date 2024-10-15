@@ -18,6 +18,8 @@ db = Database(db_name=DB_NAME,
 # db.drop_users_table()
 # db.drop_categories_table()
 # db.drop_lessons_table()
+# db.drop_lessons_dataset_table()  # TODO: DOES NOT EXIST YET !!!
 db.create_users_table()
 db.create_categories_tables()
 db.create_lessons_table()
+db.create_lessons_dataset_table()
