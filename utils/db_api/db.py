@@ -20,7 +20,7 @@ class Database:
             cursorclass=pymysql.cursors.DictCursor
         )
 
-    def execute(self, sql: str, params: tuple = (), commit=False, fetchone=False, fetchall=False) -> dict | list:
+    def execute(self, sql: str, params: tuple = (), commit=False, fetchone=False, fetchall=False):
         database = self.connect()
         cursor = database.cursor()
 
@@ -181,6 +181,25 @@ class Database:
         """
         self.execute(sql, (phone_number, telegram_id), commit=True)
 
+    def update_user_homework(self, user_id: int, lesson_id: int):
+        """Updates user's homeworks list and inserts new lesson id to completed homeworks ids list
+        
+        Args:
+            user_id: User's id
+            lesson_id (int): Lesson's id
+        """
+        sql = """
+            SELECT homeworks_done from users WHERE id = %s
+        """
+        
+        homeworks_done = self.execute(sql, (user_id,), fetchone=True).get('homeworks_done')
+        homeworks_done = (homeworks_done + "," + str(lesson_id)) if homeworks_done else str(lesson_id)
+
+        sql = """
+            UPDATE users SET homeworks_done = %s WHERE id = %s
+        """
+        self.execute(sql, (homeworks_done, user_id), commit=True)
+
     def get_user(self, telegram_id: int) -> dict:
         """Returns user object from database based on telegram id
 
@@ -195,7 +214,21 @@ class Database:
         """
         return self.execute(sql, (telegram_id,), fetchone=True)
 
-    def get_user_lang(self, telgeram_id: int) -> str:
+    def get_user_by_id(self, user_id: int) -> dict:
+        """Returns user object by user's id
+
+        Args:
+            user_id (int): User's id
+
+        Returns:
+            dict: User object
+        """
+        sql = """
+            SELECT * FROM users WHERE id = %s
+        """
+        return self.execute(sql, (user_id,), fetchone=True)
+
+    def get_user_lang(self, telegeram_id: int) -> str:
         """Returns user's selected language from database
 
         Args:
@@ -207,7 +240,7 @@ class Database:
         sql = """
             SELECT lang FROM users WHERE telegram_id = %s
         """
-        return self.execute(sql, (telgeram_id,), fetchone=True).get("lang")
+        return self.execute(sql, (telegeram_id,), fetchone=True).get("lang")
 
     def get_categories(self) -> list:
         """Gets all categories from database
@@ -294,3 +327,52 @@ class Database:
         """Gets all records from a table"""
         sql = f"SELECT * FROM {table_name}"
         return self.execute(sql, fetchall=True)
+
+    def insert_user(self, user):
+        sql = """
+            INSERT INTO users (id, telegram_id, full_name, username, phone_number, lang, last_visited_place, is_subscribed, notifications, homeworks_done)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """
+        self.execute(sql, (
+            user["id"], user["telegram_id"], user["full_name"], user["username"], user["phone_number"],
+            user["lang"], user["last_visited_place"], user["is_subscribed"], user["notifications"], user["homeworks_done"]
+        ), commit=True)
+
+    def insert_category(self, category):
+        sql = """
+            INSERT INTO categories (id, name_uz, name_ru, name_en)
+            VALUES (%s, %s, %s, %s)
+        """
+        self.execute(sql, (category["id"], category["name_uz"],
+                     category["name_ru"], category["name_en"]), commit=True)
+
+    def insert_lesson(self, lesson):
+        sql = """
+            INSERT INTO lessons (id, category_id, title_uz, title_ru, title_en, file_id, payment_required)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """
+        self.execute(sql, (
+            lesson["id"], lesson["category_id"], lesson["title_uz"], lesson["title_ru"], lesson["title_en"],
+            lesson["file_id"], lesson["payment_required"]
+        ), commit=True)
+
+    def insert_lesson_dataset(self, lesson_dataset):
+        sql = """
+            INSERT INTO lessons_dataset (id, lesson_id, for_users)
+            VALUES (%s, %s, %s)
+        """
+        self.execute(
+            sql, (lesson_dataset["id"], lesson_dataset["lesson_id"], lesson_dataset["for_users"]), commit=True)
+
+    def load_data_from_json(self, json_data):
+        for user in json_data["users"]:
+            self.insert_user(user)
+
+        for category in json_data["categories"]:
+            self.insert_category(category)
+
+        for lesson in json_data["lessons"]:
+            self.insert_lesson(lesson)
+
+        for lesson_dataset in json_data["lessons_dataset"]:
+            self.insert_lesson_dataset(lesson_dataset)

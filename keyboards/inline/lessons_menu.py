@@ -27,6 +27,7 @@ def generate_lessons_menu(lang: str, category_id: int, subscription_status: int)
                         callback_data=f"lesson_{lesson.get('id')}")
         else:
             if int(subscription_status) == 1:
+                # TODO: Show short message like "Lesson completed" for lessons for which user has sent homeworks and that was accepted
                 builder.button(text=f"{lesson.get(f'title_{lang}')} ({access_granted.get(lang)})",
                             callback_data=f"lesson_{lesson.get('id')}")
             else:

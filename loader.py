@@ -1,3 +1,5 @@
+import json
+
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.enums.parse_mode import ParseMode
@@ -25,4 +27,5 @@ db.create_lessons_table()
 db.create_lessons_dataset_table()
 
 
-db.export_to_json("database.json")
+# db.export_to_json("database.json")
+# db.load_data_from_json(json_data=json.load(open("database.json", encoding="UTF-8")))

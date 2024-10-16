@@ -1,42 +1,5 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "telegram_id": 710661311,
-            "full_name": "Ulugbek Umaraliyev",
-            "username": "thedevu101",
-            "phone_number": "998996937308",
-            "lang": "uz",
-            "last_visited_place": "settings",
-            "is_subscribed": 1,
-            "notifications": 1,
-            "homeworks_done": null
-        },
-        {
-            "id": 2,
-            "telegram_id": 7144699712,
-            "full_name": "Jaloldin Sultonov",
-            "username": "jaloldinsulton",
-            "phone_number": "998910582533",
-            "lang": "uz",
-            "last_visited_place": "settings",
-            "is_subscribed": 1,
-            "notifications": 1,
-            "homeworks_done": null
-        },
-        {
-            "id": 3,
-            "telegram_id": 2805236,
-            "full_name": "Fira",
-            "username": "Firaacadem",
-            "phone_number": null,
-            "lang": "uz",
-            "last_visited_place": null,
-            "is_subscribed": 0,
-            "notifications": 1,
-            "homeworks_done": null
-        }
-    ],
+    "users": [],
     "categories": [
         {
             "id": 1,
@@ -58,7 +21,7 @@
             "title_uz": "1-dars",
             "title_ru": "1-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "1-lesson",
-            "file_id": "BQACAgIAAxkBAAICrWb_F4mM7UDpyHLQ9cY0ufsw6oqWAAL6TQACbpBxSpR1JBzG3Ju3NgQ",
+            "file_id": "BQACAgIAAxkDAAID22cMIv_QT_9kp2LsCJPiPGlhuw0tAAL6TQACbpBxSpR1JBzG3Ju3NgQ",
             "payment_required": 0
         },
         {
@@ -67,7 +30,7 @@
             "title_uz": "2-dars",
             "title_ru": "2-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "2-lesson",
-            "file_id": "BQACAgIAAxkBAAICr2b_F_1G1RUKjn6I3d3yhVprlXHFAAIrWQACuyJISx-IVZ3FYQbMNgQ",
+            "file_id": "BQACAgIAAxkBAAIEfmcObuRGbrzwcREJ5FbmiRiVc25ZAALhSwACtK5ZSjkZBL12zam8NgQ",
             "payment_required": 1
         },
         {
@@ -76,7 +39,7 @@
             "title_uz": "3-dars",
             "title_ru": "3-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "3-lesson",
-            "file_id": "BQACAgIAAxkBAAICsWb_GCcPZomDA0MM2fQGh1SOhTC-AALZSwACtK5ZSu9TkSew8QOuNgQ",
+            "file_id": "BQACAgIAAxkBAAIEjGcOuI0EtD9BYCe2CdTLP_xl4iQMAALZSwACtK5ZSu9TkSew8QOuNgQ",
             "payment_required": 1
         },
         {
@@ -85,7 +48,7 @@
             "title_uz": "4-dars",
             "title_ru": "4-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "4-lesson",
-            "file_id": "BQACAgIAAxkBAAICs2b_GGIUzXJCh_9qopal5ZOg5yOdAALhSwACtK5ZSjkZBL12zam8NgQ",
+            "file_id": "BQACAgIAAxkBAAIEkWcOuRHdv5DEtJNue14lR44oKjimAAIrWQACuyJISx-IVZ3FYQbMNgQ",
             "payment_required": 1
         },
         {
@@ -94,7 +57,7 @@
             "title_uz": "5-dars",
             "title_ru": "5-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "5-lesson",
-            "file_id": "BQACAgIAAxkBAAICtWb_GNJVBsCau53ryWZokd36yHIFAAL8SgACwQcxSHHcCDucZ19CNgQ",
+            "file_id": "BQACAgIAAxkBAAIEkmcOuTeSrumQpGUeqL05PRlqFApHAAKjVwACEk3xSVBOyDIv-MgWNgQ",
             "payment_required": 1
         },
         {
@@ -103,7 +66,7 @@
             "title_uz": "6-dars",
             "title_ru": "6-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "6-lesson",
-            "file_id": "BQACAgIAAxkBAAICt2b_GUoqcXEfyaArzHNyiXEshvbMAAL1SwACoVHYSHqfPhPO-BQFNgQ",
+            "file_id": "BQACAgIAAxkBAAIEk2cOuVBMeensFNNAmR3vdC__QgngAAJZTAACO26ZSM1p4GVmOOLJNgQ",
             "payment_required": 1
         },
         {
@@ -112,7 +75,7 @@
             "title_uz": "7-dars",
             "title_ru": "7-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "7-lesson",
-            "file_id": "BQACAgIAAxkBAAICuWb_GW926KFs4z5s5g6BxJMKpthVAAKPPwACMeM5SMaMLUR2q67uNgQ",
+            "file_id": "BQACAgIAAxkBAAIElWcOuZaUSL83_I1D1-9oiiekUkyuAAL1SwACoVHYSHqfPhPO-BQFNgQ",
             "payment_required": 1
         },
         {
@@ -121,7 +84,7 @@
             "title_uz": "8-dars",
             "title_ru": "8-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "8-lesson",
-            "file_id": "BQACAgIAAxkBAAICu2b_GZfq2ZDdwn565jU1g1idzLRuAALwSAACMNlxS__Uaykzno-7NgQ",
+            "file_id": "BQACAgIAAxkBAAIElmcOubOyAAEcz54V_lue1YBKj2cI6wACjz8AAjHjOUjGjC1Edquu7jYE",
             "payment_required": 1
         },
         {
@@ -130,7 +93,7 @@
             "title_uz": "9-dars",
             "title_ru": "9-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "9-lesson",
-            "file_id": "BQACAgIAAxkBAAICvWb_GafHvBIu-lOGwoOCcdKPwhAaAAJcUAACz3RxSwR6VAynTbTBNgQ",
+            "file_id": "BQACAgIAAxkBAAIEl2cOucUBxyuzJx8n6pYhs9QjW9VsAAJcUAACz3RxSwR6VAynTbTBNgQ",
             "payment_required": 1
         },
         {
@@ -139,27 +102,73 @@
             "title_uz": "10-dars",
             "title_ru": "10-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
             "title_en": "10-lesson",
-            "file_id": "BQACAgIAAxkBAAICv2b_GbIdZOAvVeBJVMqa_DKAHzyaAAJZTAACO26ZSM1p4GVmOOLJNgQ",
+            "file_id": "BQACAgIAAxkBAAIEmGcOudm4FIWQC3CZjnydLM92iEUqAAK9UwACKF8BSEJ69qsdmSMAATYE",
             "payment_required": 1
         },
         {
             "id": 11,
-            "category_id": 1,
-            "title_uz": "11-dars",
-            "title_ru": "11-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
-            "title_en": "11-lesson",
-            "file_id": "BQACAgIAAxkBAAICwWb_Gb0S7J80ZMiguYpnH4-nplD0AAKjVwACEk3xSVBOyDIv-MgWNgQ",
-            "payment_required": 1
+            "category_id": 2,
+            "title_uz": "1-dars",
+            "title_ru": "1-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "1-lesson",
+            "file_id": "BQACAgIAAxkDAAID22cMIv_QT_9kp2LsCJPiPGlhuw0tAAL6TQACbpBxSpR1JBzG3Ju3NgQ",
+            "payment_required": 0
         },
         {
             "id": 12,
-            "category_id": 1,
-            "title_uz": "12-dars",
-            "title_ru": "12-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
-            "title_en": "12-lesson",
-            "file_id": "BQACAgIAAxkBAAICw2b_Gc9YY9POlbMVyQhOhtIXF2D2AAJfWwACEk3xSWNHjr9PyxNoNgQ",
+            "category_id": 2,
+            "title_uz": "2-dars",
+            "title_ru": "2-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "2-lesson",
+            "file_id": "BQACAgIAAxkBAAIEm2cOusenM5SU2RjyaqPVzxzWDyo4AAJfWwACEk3xSWNHjr9PyxNoNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 13,
+            "category_id": 2,
+            "title_uz": "3-dars",
+            "title_ru": "3-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "3-lesson",
+            "file_id": "BQACAgIAAxkBAAIEmWcOumsNHnkdEAZe1m02XKMN777DAAL8SgACwQcxSHHcCDucZ19CNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 14,
+            "category_id": 2,
+            "title_uz": "4-dars",
+            "title_ru": "4-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "4-lesson",
+            "file_id": "BQACAgIAAxkBAAIElmcOubOyAAEcz54V_lue1YBKj2cI6wACjz8AAjHjOUjGjC1Edquu7jYE",
+            "payment_required": 1
+        },
+        {
+            "id": 15,
+            "category_id": 2,
+            "title_uz": "5-dars",
+            "title_ru": "5-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "5-lesson",
+            "file_id": "BQACAgIAAxkBAAIEnWcOuyLiQklbOpqDCgXcDe9G1lfKAALwSAACMNlxS__Uaykzno-7NgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 16,
+            "category_id": 2,
+            "title_uz": "6-dars",
+            "title_ru": "6-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "6-lesson",
+            "file_id": "BQACAgIAAxkBAAIEl2cOucUBxyuzJx8n6pYhs9QjW9VsAAJcUAACz3RxSwR6VAynTbTBNgQ",
+            "payment_required": 1
+        },
+        {
+            "id": 17,
+            "category_id": 2,
+            "title_uz": "7-dars",
+            "title_ru": "7-\u0437\u0430\u043d\u044f\u0442\u0438\u0435",
+            "title_en": "7-lesson",
+            "file_id": "BQACAgIAAxkBAAIEmGcOudm4FIWQC3CZjnydLM92iEUqAAK9UwACKF8BSEJ69qsdmSMAATYE",
             "payment_required": 1
         }
+
     ],
     "lessons_dataset": [
         {

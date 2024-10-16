@@ -167,12 +167,18 @@ homework_body = {
 
 accept_or_deny_homework = {
     "uz": ["✅ Qabul qilish", "❌ Qaytarish"],
-    "uz": ["✅ Принят", "❌ Переделать"],
-    "uz": ["✅ Accept", "❌ Deny"],
+    "ru": ["✅ Принят", "❌ Переделать"],
+    "en": ["✅ Accept", "❌ Deny"],
 }
 
 lesson_name = {
     "uz": "Dars mavzusi",
     "ru": "Тема занятия",
     "en": "Lesson theme"
+}
+
+homework_accepted = {
+    "uz": "✅ Uy vazifasi qabul qilindi",
+    "ru": "✅ Домашнее задание принято",
+    "en": "✅ Homework accepted"
 }

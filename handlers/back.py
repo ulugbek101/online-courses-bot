@@ -17,9 +17,9 @@ async def back(message: types.Message, state: FSMContext):
     await state.clear()
 
     if last_visited_place == LastVisitedPlaces.SETTINGS:
-        await message.answer(text=f"{action_title.get(user.get("lang"))}", reply_markup=generate_main_menu(user.get("lang"), message.from_user.id))
+        await message.answer(text=f'{action_title.get(user.get("lang"))}', reply_markup=generate_main_menu(user.get("lang"), message.from_user.id))
 
     elif last_visited_place == LastVisitedPlaces.CHANGE_LANGUAGE:
         db.update_last_visited_place(LastVisitedPlaces.SETTINGS,
                                      message.from_user.id)
-        await message.answer(text=f"{action_title.get(user.get("lang"))}", reply_markup=generate_settings_menu(user.get("lang")))
+        await message.answer(text=f'{action_title.get(user.get("lang"))}', reply_markup=generate_settings_menu(user.get("lang")))

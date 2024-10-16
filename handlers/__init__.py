@@ -11,3 +11,4 @@ from . import grant_access
 from . import close_access
 from . import send_homework
 from . import video_id
+from . import accept_or_deny_homework
