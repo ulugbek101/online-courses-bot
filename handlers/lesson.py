@@ -22,8 +22,9 @@ async def handler(call: types.CallbackQuery):
         homeworks_list = db.get_users_done_homeworks(user.get('id')) or ""
         homeworks_list = homeworks_list.split(",")
 
-        # TODO: Send lesson video if video id is in user's homeworks_done column
-        if str(lesson.get('id')) == homeworks_list[-1] or lesson.get('id') in [1, 11]:
+        user_homeworks = db.get_users_done_homeworks(user.get('id'))
+
+        if str(lesson.get('id')) == homeworks_list[-1] or lesson.get('id') in [1, 11] or str(lesson_id - 1) in user_homeworks:
             await bot.send_chat_action(chat_id=call.from_user.id, action=chat_action)
             await call.message.answer_video(video=lesson.get('file_id'), caption=f"{lesson.get(f'title_{lang}')}", reply_markup=generate_send_homework_menu(lang=lang, user_id=user.get('id'), lesson_id=lesson.get('id')))
         else:

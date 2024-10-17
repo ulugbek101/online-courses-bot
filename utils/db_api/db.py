@@ -193,7 +193,12 @@ class Database:
         """
         
         homeworks_done = self.execute(sql, (user_id,), fetchone=True).get('homeworks_done')
-        homeworks_done = (homeworks_done + "," + str(lesson_id)) if homeworks_done else str(lesson_id)
+
+        if homeworks_done:
+            if str(lesson_id) not in homeworks_done:
+                homeworks_done += "," + str(lesson_id)
+        else:
+            homeworks_done = str(lesson_id)
 
         sql = """
             UPDATE users SET homeworks_done = %s WHERE id = %s
@@ -320,8 +325,6 @@ class Database:
 
         with open(file_path, 'w') as json_file:
             json.dump(data, json_file, indent=4)
-
-        print(f"Data exported successfully to {file_path}")
 
     def get_all_records(self, table_name: str) -> list:
         """Gets all records from a table"""

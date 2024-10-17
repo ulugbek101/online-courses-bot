@@ -174,11 +174,23 @@ accept_or_deny_homework = {
 lesson_name = {
     "uz": "Dars mavzusi",
     "ru": "Тема занятия",
-    "en": "Lesson theme"
+    "en": "Lesson theme",
 }
 
 homework_accepted = {
     "uz": "✅ Uy vazifasi qabul qilindi",
     "ru": "✅ Домашнее задание принято",
-    "en": "✅ Homework accepted"
+    "en": "✅ Homework accepted",
+}
+
+homework_not_accepted = {
+    "uz": "❌ Uy vazifasi qabul qilindi, yaxshiroq urinib ko'ring 🙂",
+    "ru": "❌ Домашнее задание не принято, вы можете лучше 🙂",
+    "en": "❌ Homework was not accepted, you can better 🙂",
+}
+
+completed = {
+    "uz": "✅ Bajarilgan",
+    "ru": "✅ Завершено",
+    "en": "✅ Completed",
 }

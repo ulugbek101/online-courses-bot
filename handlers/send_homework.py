@@ -33,17 +33,15 @@ async def send_homework_to_admins(message: types.Message, state: FSMContext):
     lesson = db.get_lesson(lesson_id)
 
     for tg_id in ADMINS:
-        # try:
-        admin_lang = db.get_user(telegram_id=tg_id).get('lang')
+        try:
+            admin_lang = db.get_user(telegram_id=tg_id).get('lang')
 
-        student_full_name = student.get('full_name')
-        student_phone_number = student.get('phone_number')
+            student_full_name = student.get('full_name')
+            student_phone_number = student.get('phone_number')
 
-        title = f"{homework_title.get(admin_lang)}\n\n{lesson_name.get(admin_lang)}: {lesson.get(f'title_{admin_lang}')} \n{FIO.get(admin_lang)}: {student_full_name}\n{phone_number.get(admin_lang)}: {student_phone_number}\n\n{homework_body.get(admin_lang)}: {message.text}"
-        await bot.send_message(chat_id=tg_id, text=title, reply_markup=generate_accept_or_deny_homework_menu(admin_lang, user_id, lesson_id))
-        print('H/w successfully sent to admins')
-        # except:
-        #     print('Error while sending h/w to admins')
-        #     pass
+            title = f"{homework_title.get(admin_lang)}\n\n{lesson_name.get(admin_lang)}: {lesson.get(f'title_{admin_lang}')} \n{FIO.get(admin_lang)}: {student_full_name}\n{phone_number.get(admin_lang)}: {student_phone_number}\n\n{homework_body.get(admin_lang)}: {message.text}"
+            await bot.send_message(chat_id=tg_id, text=title, reply_markup=generate_accept_or_deny_homework_menu(admin_lang, user_id, lesson_id))
+        except:
+            pass
         
     await message.answer(text=f"{homework_send_to_admins.get(lang)}", reply_markup=generate_main_menu(lang, message.from_user.id))

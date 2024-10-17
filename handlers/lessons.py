@@ -12,4 +12,4 @@ async def show_categories(call: types.CallbackQuery):
     lang = user.get('lang')
     category_id = int(call.data.split("_")[-1])
 
-    await call.message.answer(text=f"{action_title.get(lang)}", reply_markup=generate_lessons_menu(lang, category_id, user.get('is_subscribed')))
+    await call.message.answer(text=f"{action_title.get(lang)}", reply_markup=generate_lessons_menu(lang, category_id, user.get('is_subscribed'), user.get('id')))

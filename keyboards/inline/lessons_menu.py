@@ -2,16 +2,17 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import InlineKeyboardMarkup
 
 from loader import db
-from localization.i18n import access_granted, access_denied, free_lesson
+from localization.i18n import completed, access_denied, free_lesson
 
 
-def generate_lessons_menu(lang: str, category_id: int, subscription_status: int) -> InlineKeyboardMarkup:
+def generate_lessons_menu(lang: str, category_id: int, subscription_status: int, user_id: int) -> InlineKeyboardMarkup:
     """Generates and returns lessons keyboard
 
     Args:
         lang (str): user's language
         category_id (int): lessons' category
         subscription_status (int): user's subscription status
+        user_id (int): user's id who is requesting lessons 
 
     Returns:
         InlineKeyboardMarkup: Lesson keyboard
@@ -27,8 +28,8 @@ def generate_lessons_menu(lang: str, category_id: int, subscription_status: int)
                         callback_data=f"lesson_{lesson.get('id')}")
         else:
             if int(subscription_status) == 1:
-                # TODO: Show short message like "Lesson completed" for lessons for which user has sent homeworks and that was accepted
-                builder.button(text=f"{lesson.get(f'title_{lang}')} ({access_granted.get(lang)})",
+                user_homeworks = db.get_users_done_homeworks(user_id)
+                builder.button(text=f"{lesson.get(f'title_{lang}')} {(completed.get(lang)) if str(lesson.get('id')) in user_homeworks else ''}",
                             callback_data=f"lesson_{lesson.get('id')}")
             else:
                 builder.button(text=f"{lesson.get(f'title_{lang}')} ({access_denied.get(lang)})",
