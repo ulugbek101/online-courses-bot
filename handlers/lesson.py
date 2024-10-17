@@ -26,6 +26,6 @@ async def handler(call: types.CallbackQuery):
 
         if str(lesson.get('id')) == homeworks_list[-1] or lesson.get('id') in [1, 11] or str(lesson_id - 1) in user_homeworks:
             await bot.send_chat_action(chat_id=call.from_user.id, action=chat_action)
-            await call.message.answer_video(video=lesson.get('file_id'), caption=f"{lesson.get(f'title_{lang}')}", reply_markup=generate_send_homework_menu(lang=lang, user_id=user.get('id'), lesson_id=lesson.get('id')))
+            await call.message.answer_video(video=lesson.get('file_id'), caption=f"{lesson.get(f'title_{lang}')}", reply_markup=generate_send_homework_menu(lang=lang, user_id=user.get('id'), lesson_id=lesson.get('id')), protect_content=True)
         else:
             await call.answer(text=f"{complete_homework_warning.get(lang)}", show_alert=True)
