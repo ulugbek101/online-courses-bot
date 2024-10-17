@@ -28,7 +28,7 @@ def generate_lessons_menu(lang: str, category_id: int, subscription_status: int,
                         callback_data=f"lesson_{lesson.get('id')}")
         else:
             if int(subscription_status) == 1:
-                user_homeworks = db.get_users_done_homeworks(user_id) or []
+                user_homeworks = db.get_users_done_homeworks(user_id) if db.get_users_done_homeworks(user_id) else ''
                 builder.button(text=f"{lesson.get(f'title_{lang}')} {(completed.get(lang)) if str(lesson.get('id')) in user_homeworks else ''}",
                             callback_data=f"lesson_{lesson.get('id')}")
             else:
