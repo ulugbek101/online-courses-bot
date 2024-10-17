@@ -3,5 +3,4 @@ class LastVisitedPlaces:
     CHANGE_LANGUAGE = "change_language"
 
 
-ADMINS = [710661311]
-# ADMINS = [710661311, 2805236]
+ADMINS = [710661311, 2805236]
