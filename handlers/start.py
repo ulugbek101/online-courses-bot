@@ -16,7 +16,7 @@ async def start(message: types.Message, state: FSMContext):
     user = db.get_user(message.from_user.id)
 
     if user:
-        await message.answer(text=f"{welcome_back.get(lang)}".format(message.from_user.full_name), reply_markup=generate_main_menu(lang=user.get("lang"), telegram_id=message.from_user.id))
+        await message.answer(text=f"{welcome_back.get(user.get('lang'))}".format(message.from_user.full_name), reply_markup=generate_main_menu(lang=user.get("lang"), telegram_id=message.from_user.id))
     else:
         await state.set_state(LanguagesForm.lang)
         await message.answer(text=f"{greeting.get(lang)} {select_language.get(lang)}".format(message.from_user.full_name), reply_markup=generate_languages_menu())
