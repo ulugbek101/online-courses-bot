@@ -1,7 +1,16 @@
 about_me_text = {
-    "uz": "Men bu yo'lanishda 10+ yildan ortiq tajribaga ega mutaxassisman va ...",
-    "ru": "Я являюсь специалистом в этой области с опытом свыше 10 лет и ...",
-    "en": "I'm the specialist with the 10+ years of experience and ...",
+    "uz": """27 yillik tajribaga ega stilist-kolorist.
+O'zbekiston Sartaroshlar uyushmasi qoshidagi hakamlar hay’ati.
+Pivot nuqtasi usuli, soch turmagi va rang berishdan foydalangan holda soch turmaklari bo'yicha trener.
+300 dan ortiq talabalar, aksariyati respublika va xorijda yulduz stilistlariga aylanishgan""",
+    "ru": """Стилист-колорист с 27 летним стажем.
+Жюри в Ассоциации парикмахеров Узбекистана.
+Тренер по  стрижкам по методике Pivot point, по прическам и колористике.
+Выпустила свыше 300 учеников многие из них стали звёздными стилистами по всей республике и зарубежом""",
+    "en": """Stylist-colorist with 27 years of experience
+Jury at the Association of Hairdressers of Uzbekistan.
+Trainer for haircuts using the Pivot point method, hairstyles and coloring.
+Graduated over 300 students, many of them became star stylists throughout the republic and abroad""",
 }
 
 select_language = {
